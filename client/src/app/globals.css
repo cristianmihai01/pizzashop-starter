@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  z-index: 100;
+}
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+/* .gradient {
+  background-image: linear-gradient(90deg, #ed4d1c 30%, #feb331 147.14%);
+  color: white;
+}
+.gradient:hover {
+  background-image: linear-gradient(240deg, #ed4d1c 30%, #feb331 147.14%);
+  color: white;
+} */
+
+@layer base {
+  body {
+    @apply text-black;
+  }
+  .btn {
+    @apply rounded-xl font-semibold transition-all;
+  }
+  .btn-sm {
+    @apply py-3 px-6;
+  }
+  .btn-lg {
+    @apply py-4 px-6;
+  }
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90;
+  }
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary/90;
+  }
+  .input {
+    @apply py-4 px-6;
+  }
+  .textarea {
+    @apply resize-none py-4 px-6;
+  }
+  .input,
+  .textarea {
+    @apply outline-1 focus:outline-double focus:outline-orange rounded-lg border font-semibold placeholder:text-[#767676] placeholder:text-[15px] placeholder:font-semibold transition-all duration-100;
+  }
+  .gradient {
+    @apply bg-gradient-to-r to-primary via-orange from-primary bg-size-200 bg-pos-0 hover:bg-pos-100 text-white transition-all duration-500;
+  }
+}
